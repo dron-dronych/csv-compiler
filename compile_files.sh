@@ -1,6 +1,6 @@
 dir=$1
 
-echo "Compiling in: $dir..."
+echo "Compiling from: $dir..."
 
 
 files=$(ls $dir)
