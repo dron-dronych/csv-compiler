@@ -1,3 +1,5 @@
+#!/bin/bash
+
 dir=$1
 
 echo "Compiling from: $dir..."
