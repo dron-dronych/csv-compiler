@@ -1,12 +1,22 @@
 #!/bin/bash
 
+
+compiled="compiled.csv"
 dir=$1
+
+while [ "$2" != "" ]; do
+	case $2 in
+		-f | --output-file ) shift
+			compiled="$2"
+			;;
+	esac
+	shift
+done
 
 echo "Compiling from: $dir..."
 
 
 files=$(ls $dir)
-compiled="compiled.csv"
 
 touch $compiled
 
