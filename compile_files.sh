@@ -9,6 +9,11 @@ while [ "$2" != "" ]; do
 		-f | --output-file ) shift
 			compiled="$2"
 			;;
+		-h | --help ) usage
+			      exit
+			      ;;
+		* ) usage
+		    exit 1
 	esac
 	shift
 done
