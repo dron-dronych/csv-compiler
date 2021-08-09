@@ -4,6 +4,11 @@
 compiled="compiled.csv"
 dir=$1
 
+usage()
+{
+	echo "usage: compile_files dir [-f | --output-file output_filename]"
+}
+
 while [ "$2" != "" ]; do
 	case $2 in
 		-f | --output-file ) shift
@@ -12,8 +17,6 @@ while [ "$2" != "" ]; do
 		-h | --help ) usage
 			      exit
 			      ;;
-		* ) usage
-		    exit 1
 	esac
 	shift
 done
