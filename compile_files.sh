@@ -6,7 +6,7 @@ dir=$1
 
 usage()
 {
-	echo "usage: compile_files dir [-f | --output-file output_filename]"
+	echo "usage: ./compile_files.sh dir [-f | --output-file output_filename]"
 }
 
 while [ "$2" != "" ]; do
