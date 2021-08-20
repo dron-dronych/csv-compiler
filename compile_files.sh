@@ -9,6 +9,11 @@ usage()
 	echo "usage: ./compile_files.sh dir [-f | --output-file output_filename]"
 }
 
+if [ "$1" == "" ]; then
+       usage
+       exit
+fi       
+
 while [ "$2" != "" ]; do
 	case $2 in
 		-f | --output-file ) shift
