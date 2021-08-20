@@ -1,12 +1,35 @@
 #!/bin/bash
 
+
+compiled="compiled.csv"
 dir=$1
+
+usage()
+{
+	echo "usage: ./compile_files.sh dir [-f | --output-file output_filename]"
+}
+
+if [ "$1" == "" ]; then
+       usage
+       exit
+fi       
+
+while [ "$2" != "" ]; do
+	case $2 in
+		-f | --output-file ) shift
+			compiled="$2"
+			;;
+		-h | --help ) usage
+			      exit
+			      ;;
+	esac
+	shift
+done
 
 echo "Compiling from: $dir..."
 
 
 files=$(ls $dir)
-compiled="compiled.csv"
 
 touch $compiled
 
