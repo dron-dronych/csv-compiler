@@ -23,3 +23,5 @@ me@dreamer:~$ bash compile_fles.sh DIR
 ```
 
 where DIR is the name of the directory with the files to compile
+
+You can optionally set the desired output filename with the -f | --file-output option.
